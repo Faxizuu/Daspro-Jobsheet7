@@ -16,24 +16,32 @@ public class SiakadWhile11 {
             nilai = sc.nextInt();
 
             if (nilai < 0 || nilai > 100) {
-                System.out.println("Nilai tidak valid, masukkan ulang.");
+                System.out.println("Nilai tidak valid. Masukkan lagi nilai yang valid!");
                 continue;
             }
 
+            String huruf;
+
             if (nilai > 80) {
-                System.out.println("Nilai huruf: A");
+                huruf = "A";
             } else if (nilai > 73) {
-                System.out.println("Nilai huruf: B+");
+                huruf = "B+";
             } else if (nilai > 65) {
-                System.out.println("Nilai huruf: B");
+                huruf = "B";
             } else if (nilai > 60) {
-                System.out.println("Nilai huruf: C+");
+                huruf = "C+";
             } else if (nilai > 50) {
-                System.out.println("Nilai huruf: C");
+                huruf = "C";
             } else if (nilai > 39) {
-                System.out.println("Nilai huruf: D");
+                huruf = "D";
             } else {
-                System.out.println("Nilai huruf: E");
+                huruf = "E";
+            }
+
+            System.out.println("Nilai mahasiswa ke-" + (i + 1) + " adalah " + huruf);
+
+            if (huruf.equals("A")) {
+                System.out.println("Bagus, pertahankan nilainya!");
             }
 
             i++;
